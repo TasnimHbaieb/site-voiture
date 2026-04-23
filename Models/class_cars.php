@@ -20,7 +20,7 @@ class Car {
         private string $description = ""
     ) {}
 
-    // 🔷 Affichage simple
+
     public function __toString(): string {
         return "Voiture [" . $this->code . "] " . $this->modele .
                " | Prix: " . number_format($this->prix, 2) . " " . self::DEVISE .
@@ -28,40 +28,40 @@ class Car {
                " | Stock: " . $this->stock;
     }
 
-    // 🔷 isset()
+    
     public function __isset($attr){
         return isset($this->$attr);
     }
 
-    // 🔷 get
+    
     public function __get(string $name) {
         return property_exists($this, $name) ? $this->$name : null;
     }
 
-    // 🔷 set avec validation
+    
     public function __set(string $name, $value): void {
 
         if (!property_exists($this, $name)) return;
 
-        // ✔ prix positif
+        
         if ($name === 'prix' && $value < 0) {
             echo "Erreur : le prix ne peut pas être négatif<br>";
             return;
         }
 
-        // ✔ stock positif
+        
         if ($name === 'stock' && $value < 0) {
             echo "Erreur : stock invalide<br>";
             return;
         }
 
-        // ✔ année valide
+        
         if ($name === 'annee' && ($value < 1900 || $value > date("Y"))) {
             echo "Erreur : année invalide<br>";
             return;
         }
 
-        // ✔ kilométrage positif
+
         if ($name === 'kilometrage' && $value < 0) {
             echo "Erreur : kilométrage invalide<br>";
             return;

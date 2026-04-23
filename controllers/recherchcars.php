@@ -9,10 +9,10 @@ if (isset($_GET['query']) && isset($_GET['brand'])) {
 
     foreach ($cars as $car) {
 
-        // Vérifier le modèle
+        
         $verifQuery = strpos(strtolower($car['modele']), $query);
 
-        // Vérifier la marque
+        
         $verifBrand = strtolower($car['brand']) === $brand;
 
         if ($verifQuery !== false && $verifBrand) {
@@ -21,11 +21,11 @@ if (isset($_GET['query']) && isset($_GET['brand'])) {
 
             echo "<h3>" . $car['modele'] . "</h3>";
 
-            echo "<p>🚗 Marque : " . $car['brand'] . "</p>";
+            echo "<p> Marque : " . $car['brand'] . "</p>";
 
             echo "<img src='images/" . $car['image'] . "' width='150'>";
 
-            echo "<p>💰 Prix : " . $car['prix'] . " DT</p>";
+            echo "<p> Prix : " . $car['prix'] . " DT</p>";
 
             echo "</div><hr>";
         }
