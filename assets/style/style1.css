@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ─── BODY CENTER ─── */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f5f5;
+}
+
+/* ─── CONTAINER (div principal) ─── */
+div {
+    background-color: rgba(255, 218, 185, 0.466);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 320px;
+}
+
+/* ─── INPUTS ─── */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* ─── BUTTON ─── */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* ─── TABLE (si tu utilises tableau) ─── */
+table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    background-color: #f2f2f2;
+}
+
+td, th {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* ─── TEXT COLORS ─── */
+span {
+    color: red;
+}
+
+#BA {
+    color: green;
+}
+
+/* ─── IMAGE ─── */
+img {
+    display: block;
+    margin: auto;
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+}
